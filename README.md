@@ -18,9 +18,13 @@ The **Yandex.Realty dataset**, includes real estate listings for apartments in S
 
 ## Preprocessing
 
-To further work with the dataset, it was necessary to deal with missing values, get rid of outliers and prepare the dataset for building a model, selecting the most significant features and paying special attention to the target variable
+To further work with the dataset, it was necessary to deal with missing values, get rid of outliers and prepare the dataset for building a model, selecting the most significant features and paying special attention to the target variable. Features should be scaled using StandardScaler from Scikit-learn.
+
+Violin plot creation:
 
 ![Violin plot](images/pic1.png)
+
+Irrelevant columns should be dropped:
 
 ![Correlation matrix](images/Pic3.png)
 
@@ -39,6 +43,13 @@ The models were developed using the scikit-learn framework.
 As part of the project, 3 models were developed: Decision Tree model, Random forest and Gradient boosting.
 
 The best results in terms of learning speed and metrics were demonstrated by the **Gradient boosting model**, which was later used on the test sample.
+
+Hyperparameters:
+- random_state=42
+- n_estimators=100
+- max_depth = 3
+- min_samples_split = 2
+- min_samples_leaf =1
 
 The effectiveness of the models was assessed using three metrics:
 
@@ -87,5 +98,9 @@ docker run --network host -d annauskova/gsom_e2e24:v.0.1
 sudo ufw allow 7778
 python app.py
 ```
+**Presictions examples**
 
+![Result1](images/example1.png)
+
+![Result2](images/example2.png)
 
