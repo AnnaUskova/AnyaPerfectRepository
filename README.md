@@ -90,6 +90,12 @@ RUN apt install -y python3-pip
 RUN pip3 install -r requirements.txt
 CMD python3 app.py
 ```
+Connect to your remote VM using SSH:
+
+```python
+ssh <login>@<your_vm_address>
+```
+
 
 And run our app using:
 
@@ -98,7 +104,7 @@ docker run --network host -d annauskova/gsom_e2e24:v.0.1
 sudo ufw allow 7778
 python app.py
 ```
-**Presictions examples**
+**Predictions examples**
 
 ![Result1](images/example1.png)
 
